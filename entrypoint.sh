@@ -107,7 +107,8 @@ run_cron(){
   initial_download
 
   log "Setup the cron job (${CRON_TIME})"
-  echo "${CRON_TIME} /entrypoint.sh ${action}" > /etc/crontabs/root
+  echo "${CRON_TIME} /entrypoint.sh ${action}" > /etc/crontabs/${S3_SYNC_USER}
+
   exec crond -f -l 6
 }
 
