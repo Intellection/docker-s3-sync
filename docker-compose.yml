@@ -11,6 +11,4 @@ services:
       CRON_TIME: "* * * * *"
       INITIAL_DOWNLOAD: "true"
       S3PATH: "s3://my-bucket/my-prefix"
-      SYNCDIR: "/data"
-    volumes:
-      - /data
+      SYNCDIR: "/tmp/data"
