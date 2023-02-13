@@ -1,5 +1,4 @@
-FROM alpine:20230208
-LABEL maintainer "Vlad Ghinea vlad@ghn.me"
+FROM alpine:3.17
 
 # Environment
 ENV AWS_DEFAULT_REGION=us-east-1
