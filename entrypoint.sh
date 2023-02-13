@@ -109,7 +109,7 @@ run_cron(){
   log "Setup the cron job (${CRON_TIME})"
   echo "${CRON_TIME} /entrypoint.sh ${action} > /proc/1/fd/1 2>&1" > /etc/crontabs/${S3_SYNC_USER}
 
-  exec crond -f -l 6
+  exec crond -f -l 4
 }
 
 # Main function
