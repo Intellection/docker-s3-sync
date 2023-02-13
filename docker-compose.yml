@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  sync:
+    build: .
+    image: zappi/s3-sync
+    command: periodic_download
+    environment:
+      AWS_ACCESS_KEY_ID: ""
+      AWS_DEFAULT_REGION: ""
+      AWS_SECRET_ACCESS_KEY: ""
+      CRON_TIME: "* * * * *"
+      INITIAL_DOWNLOAD: "true"
+      S3PATH: "s3://my-bucket/my-prefix"
+      SYNCDIR: "/tmp/data"
