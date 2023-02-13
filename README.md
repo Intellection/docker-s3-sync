@@ -28,7 +28,7 @@ The image supports the following commands:
 | AWS_SECRET_ACCESS_KEY | Yes | (or functional IAM profile) |
 | AWS_DEFAULT_REGION | Yes | (or functional IAM profile) |
 | S3PATH | Yes | the S3 synchronize location (ex: `s3://mybucket/myprefix`) |
-| SYNCDIR | No | the local synchronize location (defaults to `/sync`) |
+| SYNCDIR | Yes | the local synchronize location |
 | AWS_S3_SSE | No | use S3 Server Side Encryption; it can be `false` for no encryption, `aes256` or `true` for Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3) and `kms` for Server-Side Encryption with AWS KMS-Managed Keys (SSE-KMS) (defaults to `false`). For more information refer to <https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html> (Note: Server-Side Encryption with Customer-Provided Keys (SSE-C) is not currently supported) |
 | AWS_S3_SSE_KMS_KEY_ID | No | The AWS KMS key ID that should be used to server-side encrypt the object in S3 (only available if use in conjunction with `AWS_S3_SSE`) |
 | CRON_TIME | No | a valid cron expression (ex: `CRON_TIME='0 */6 * * *'` runs every 6 hours; defaults to hourly) |

@@ -7,7 +7,7 @@ IFS=$'\n\t'
 
 # VARs
 S3PATH=${S3PATH:-}
-SYNCDIR="${SYNCDIR:-/sync}"
+SYNCDIR="${SYNCDIR:-}"
 AWS_S3_SSE="${AWS_S3_SSE:-false}"
 AWS_S3_SSE_KMS_KEY_ID="${AWS_S3_SSE_KMS_KEY_ID:-}"
 CRON_TIME="${CRON_TIME:-10 * * * *}"
