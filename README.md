@@ -35,7 +35,6 @@ The image supports the following commands:
 | INITIAL_DOWNLOAD | No | whether to download files initially (defaults to `true`); this will only download the files if the directory is empty. Set this to `force` to skip this check |
 | SYNCEXTRA | No | add extra options to aws-cli sync command |
 
-
 ## Usage
 
 ### Download files and exit
@@ -90,7 +89,7 @@ docker run -d \
   zappi/s3sync
 ```
 
-Notes:
+**Notes:**
 
 * The `--rm` flag in the "Download files and exit" command removes the container after it exits, avoiding a build-up of stopped containers.
 * In "Upload files and exit" command, the `upload` argument tells the container to upload files before exiting.
