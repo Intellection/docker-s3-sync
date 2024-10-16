@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+* Upgrade base image to `alpine:3.20.3`.
+
 ## 0.1.0
 
 * Initial release.
