@@ -1,5 +1,7 @@
 # S3 Sync
 
+[![release-docker-image](https://github.com/Intellection/docker-s3-sync/actions/workflows/release.yml/badge.svg)](https://github.com/Intellection/docker-s3-sync/actions/workflows/release.yml) [![test-docker-image](https://github.com/Intellection/docker-s3-sync/actions/workflows/test.yml/badge.svg)](https://github.com/Intellection/docker-s3-sync/actions/workflows/test.yml)
+
 This Docker container syncs a local directory to an AWS S3 bucket, allowing for easy backups and synchronization of data.
 
 If the specified local directory is empty, it performs an initial sync from the specified S3 bucket. Then, it syncs that directory with the specified S3 bucket. If the local directory was not empty to begin with, it skips the initial sync.
