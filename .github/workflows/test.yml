@@ -1,0 +1,35 @@
+name: test-docker-image
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+
+env:
+  IMAGE: zappi/s3-sync
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Prepare image metadata
+        id: metadata
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Test multi-arch building of image
+        uses: docker/build-push-action@v6
+        with:
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          context: .
+          labels: ${{ steps.metadata.outputs.labels }}
+          platforms: linux/amd64,linux/arm64
+          push: false
+          tags: ${{ steps.metadata.outputs.tags }}
