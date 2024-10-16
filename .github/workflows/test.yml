@@ -3,7 +3,7 @@ name: test-docker-image
 on:
   pull_request:
     branches:
-      - 'master'
+      - 'main'
 
 env:
   IMAGE: zappi/s3-sync
